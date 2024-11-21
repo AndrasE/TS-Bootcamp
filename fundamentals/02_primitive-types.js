@@ -6,9 +6,11 @@ console.log("total: ", total);
 var title = "TS";
 var subtitle = "TypeScript Bootcamp";
 var fullTitle = title + ": " + subtitle;
-console.log("fulltitle: ", fullTitle);
+console.log("full title: ", fullTitle);
+var fullTitleTemplateString = "full title: ".concat(title, ": ").concat(subtitle);
+console.log(fullTitleTemplateString);
 //primitive types: boolean
-var publised = true;
-if (publised) {
+var published = true;
+if (published) {
     console.log("Yes it is published.");
 }
