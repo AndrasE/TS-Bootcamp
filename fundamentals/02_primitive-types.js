@@ -14,3 +14,13 @@ var published = true;
 if (published) {
     console.log("Yes it is published.");
 }
+//primitive types: objects + nested objects
+var course = {
+    title: "TS bootcamp",
+    subtitle: "Listen, look, learn and listen",
+    lessonCount: 666,
+    author: {
+        firstName: "Andras",
+        lastName: "Nice",
+    }
+};
