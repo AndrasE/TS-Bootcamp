@@ -13,3 +13,18 @@ console.log("title " + subTitle);
 if (!subTitle) {
     console.log("The value of subTitle is not known yet.")
 }
+
+//optional chaining
+let course = null
+
+if (course?.textFields?.title) {
+    console.log(`The title is ${course.textFields.title}`);
+}
+
+//null coalescing operator
+
+let course2 = null
+
+const title2 = course?.textFields?.title ?? "No title available";
+
+console.log(title2);
