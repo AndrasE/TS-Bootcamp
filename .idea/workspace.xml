@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0cd8f47-bd15-4ad2-9407-87b7c64b20e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/03_null_undifinded.js" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/03_null_undifinded.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/03_null_undifinded.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/03_null_undifinded.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +32,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2p24oP6Qfll0lr01m02tFaVPkfn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,7 +84,7 @@
       <workItem from="1732039807182" duration="2831000" />
       <workItem from="1732212807503" duration="4207000" />
       <workItem from="1732348584689" duration="3927000" />
-      <workItem from="1732552572884" duration="1577000" />
+      <workItem from="1732552572884" duration="3231000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
