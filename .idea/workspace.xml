@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0cd8f47-bd15-4ad2-9407-87b7c64b20e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/02_primitive-types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/03_null_undifinded.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/05_enums.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/06_any_type.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +86,7 @@
       <workItem from="1732348584689" duration="3927000" />
       <workItem from="1732552572884" duration="3862000" />
       <workItem from="1732726165150" duration="2439000" />
+      <workItem from="1732813333036" duration="2624000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
