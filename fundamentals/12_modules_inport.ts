@@ -1,5 +1,5 @@
 import {PAGE_SIZE, COURSE, Course} from "./13_modules_exports";
-import   from "./14_default_export";
+import printCourse  from "./14_default_export";
 
 const pageSize = PAGE_SIZE;
 

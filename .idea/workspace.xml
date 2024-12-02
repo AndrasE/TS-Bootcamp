@@ -88,7 +88,7 @@
       <workItem from="1732552572884" duration="3862000" />
       <workItem from="1732726165150" duration="2439000" />
       <workItem from="1732813333036" duration="3352000" />
-      <workItem from="1733157371045" duration="2419000" />
+      <workItem from="1733157371045" duration="3035000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
@@ -110,6 +110,7 @@
         <option value="$PROJECT_DIR$/fundamentals/03_null_undifinded.js" />
         <option value="$PROJECT_DIR$/fundamentals/05_enums.js" />
         <option value="$PROJECT_DIR$/fundamentals/06_any_type.js" />
+        <option value="$PROJECT_DIR$/fundamentals/15_arrow_functions.js" />
       </list>
     </option>
   </component>
