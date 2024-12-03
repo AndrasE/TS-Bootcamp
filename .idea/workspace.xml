@@ -88,6 +88,8 @@
       <workItem from="1732726165150" duration="2439000" />
       <workItem from="1732813333036" duration="3352000" />
       <workItem from="1733157371045" duration="4850000" />
+      <workItem from="1733245508917" duration="476000" />
+      <workItem from="1733246624419" duration="1974000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
@@ -111,6 +113,8 @@
         <option value="$PROJECT_DIR$/fundamentals/06_any_type.js" />
         <option value="$PROJECT_DIR$/fundamentals/15_arrow_functions.js" />
         <option value="$PROJECT_DIR$/fundamentals/16_default_function_arguements.js" />
+        <option value="$PROJECT_DIR$/fundamentals/17_spread_operator.js" />
+        <option value="$PROJECT_DIR$/fundamentals/18_object_destructuring.js" />
       </list>
     </option>
   </component>
