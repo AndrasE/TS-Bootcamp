@@ -12,6 +12,7 @@ const course2: Course = {
     title: "TS 2",
     lessonCount: 25
 }
+debugger;
 
 function printCourse(message: string, ...courses: Course[]) {
 
@@ -22,5 +23,6 @@ function printCourse(message: string, ...courses: Course[]) {
     }
 }
 
+debugger;
 //printCourse("welcome to courses:", [course1, course2])
 printCourse("welcome to courses:", course1, course2)

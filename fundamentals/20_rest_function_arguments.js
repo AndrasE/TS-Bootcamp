@@ -19,3 +19,4 @@ function printCourse(message) {
 }
 //printCourse("welcome to courses:", [course1, course2])
 printCourse("welcome to courses:", course1, course2);
+//# sourceMappingURL=20_rest_function_arguments.js.map
