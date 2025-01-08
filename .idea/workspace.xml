@@ -99,6 +99,7 @@
       <workItem from="1733339613030" duration="2942000" />
       <workItem from="1733848941213" duration="2422000" />
       <workItem from="1733939103764" duration="4320000" />
+      <workItem from="1736355766523" duration="3209000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
@@ -129,6 +130,8 @@
         <option value="$PROJECT_DIR$/fundamentals/20_rest_function_arguments.js.map" />
         <option value="$PROJECT_DIR$/fundamentals/22_ts_functions.js" />
         <option value="$PROJECT_DIR$/fundamentals/23_function_types.js" />
+        <option value="$PROJECT_DIR$/fundamentals/25_function_types.js" />
+        <option value="$PROJECT_DIR$/fundamentals/26_type_predicates.js" />
       </list>
     </option>
   </component>
