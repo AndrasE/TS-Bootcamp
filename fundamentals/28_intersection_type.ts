@@ -1,8 +1,8 @@
-interface  HasId {
+interface HasId {
     id: string
 }
 
-interface  HasTitle {
+interface HasTitle {
     title: string
     description: string;
 }
@@ -10,5 +10,7 @@ interface  HasTitle {
 type Course = HasId & HasTitle;
 
 const course : Course = {
-
+    id: "MyId",
+    title: "TS",
+    description: "Bootcamp"
 }

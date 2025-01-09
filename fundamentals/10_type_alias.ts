@@ -1,3 +1,4 @@
-type CourseStatus: "draft" | "unpublished" | "published" | "archived" = "draft";
+type CourseStatus = "draft" | "unpublished" | "published" | "archived";
 
-let courseStatus:CourseStatus = "draft"
+
+let courseStatus: CourseStatus = "draft";

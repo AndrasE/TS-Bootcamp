@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "lite-server"
+    "start": "../node_modules/.bin/lite-server"
   },
   "author": "",
   "license": "ISC",

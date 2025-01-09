@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0cd8f47-bd15-4ad2-9407-87b7c64b20e6" name="Changes" comment="t">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/01_why_typescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/01_why_typescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/10_type_alias.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/10_type_alias.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/20_rest_function_arguments.js" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/20_rest_function_arguments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/21_shorthand_object_creation_notation .ts" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/21_shorthand_object_creation_notation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/26_type_predicates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/28_intersection_type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/28_intersection_type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +36,7 @@
     <option name="SORT_ALPHABETICALLY" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -64,6 +74,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rohad\WebstormProjects\TS-Bootcamp\fundamentals" />
+      <recent name="C:\Users\rohad\WebstormProjects\TS-Bootcamp" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,7 +112,7 @@
       <workItem from="1733939103764" duration="4320000" />
       <workItem from="1736355766523" duration="3645000" />
       <workItem from="1736360695084" duration="771000" />
-      <workItem from="1736446912528" duration="641000" />
+      <workItem from="1736446912528" duration="2869000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
@@ -134,6 +145,25 @@
         <option value="$PROJECT_DIR$/fundamentals/23_function_types.js" />
         <option value="$PROJECT_DIR$/fundamentals/25_function_types.js" />
         <option value="$PROJECT_DIR$/fundamentals/26_type_predicates.js" />
+        <option value="$PROJECT_DIR$/fundamentals/05_enums.js" />
+        <option value="$PROJECT_DIR$/fundamentals/10_interfaces.js" />
+        <option value="$PROJECT_DIR$/fundamentals/06_any_type.js" />
+        <option value="$PROJECT_DIR$/fundamentals/08_non_null_assertion_operator.js" />
+        <option value="$PROJECT_DIR$/fundamentals/10_type_alias.js" />
+        <option value="$PROJECT_DIR$/fundamentals/04_arrays.js" />
+        <option value="$PROJECT_DIR$/fundamentals/24_tuples.js" />
+        <option value="$PROJECT_DIR$/fundamentals/27_never_type.js" />
+        <option value="$PROJECT_DIR$/fundamentals/11_type_assertions.js" />
+        <option value="$PROJECT_DIR$/fundamentals/09_literal_type.js" />
+        <option value="$PROJECT_DIR$/fundamentals/03_null_undifinded.js" />
+        <option value="$PROJECT_DIR$/fundamentals/14_default_export.js" />
+        <option value="$PROJECT_DIR$/fundamentals/12_modules_inport.js" />
+        <option value="$PROJECT_DIR$/fundamentals/13_modules_exports.js" />
+        <option value="$PROJECT_DIR$/fundamentals/07_union_types.js" />
+        <option value="$PROJECT_DIR$/fundamentals/02_primitive-types.js" />
+        <option value="$PROJECT_DIR$/fundamentals/28_intersection_type.js" />
+        <option value="$PROJECT_DIR$/fundamentals/26_type_predicates.js" />
+        <option value="$PROJECT_DIR$/fundamentals/21_shorthand_object_creation_notation.js" />
       </list>
     </option>
   </component>

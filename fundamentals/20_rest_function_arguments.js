@@ -6,6 +6,7 @@ var course2 = {
     title: "TS 2",
     lessonCount: 25
 };
+debugger;
 function printCourse(message) {
     var courses = [];
     for (var _i = 1; _i < arguments.length; _i++) {
@@ -13,10 +14,10 @@ function printCourse(message) {
     }
     console.log(message);
     for (var _a = 0, courses_1 = courses; _a < courses_1.length; _a++) {
-        var course = courses_1[_a];
-        console.log(course.title);
+        var course_1 = courses_1[_a];
+        console.log(course_1.title);
     }
 }
+debugger;
 //printCourse("welcome to courses:", [course1, course2])
 printCourse("welcome to courses:", course1, course2);
-//# sourceMappingURL=20_rest_function_arguments.js.map

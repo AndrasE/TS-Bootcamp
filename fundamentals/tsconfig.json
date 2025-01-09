@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES5"
+  },
+  "files": [
+    "21_shorthand_object_creation_notation.ts",
+    "26_type_predicates.ts"
+  ]
+}
