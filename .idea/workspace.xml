@@ -6,36 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c0cd8f47-bd15-4ad2-9407-87b7c64b20e6" name="Changes" comment="t">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/01_why_typescript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/02_primitive-types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/03_null_undifinded.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/04_arrays.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/05_enums.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/06_any_type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/07_union_types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/08_non_null_assertion_operator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/09_literal_type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/10_interfaces.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/10_type_alias.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/11_type_assertions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/12_modules_inport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/13_modules_exports.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/14_default_export.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/15_arrow_functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/16_default_function_arguements.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/17_spread_operator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/18_object_destructuring.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/19_array_spread_destructuring.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/20_rest_function_arguments.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/21_shorthand_object_creation_notation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/22_ts_functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/23_function_types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/24_tuples.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/25_function_types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/26_type_predicates.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/27_never_type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/28_intersection_type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundamentals/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +105,7 @@
       <workItem from="1736355766523" duration="3645000" />
       <workItem from="1736360695084" duration="771000" />
       <workItem from="1736446912528" duration="3847000" />
+      <workItem from="1736879020731" duration="1789000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <option name="closed" value="true" />
