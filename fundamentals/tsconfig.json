@@ -1,7 +1,56 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "outDir": "dist"
-  },
+    // Specifies the output directory for compiled JavaScript files
+    "outDir": "./dist",
 
+    // Specifies the root directory of the TypeScript source files
+    "rootDir": "./src",
+
+    // Specifies the ECMAScript target version for compiled code
+    "target": "ES6",
+
+    // Module system to use in the compiled code
+    "module": "CommonJS",
+
+    // Include source maps in compiled output for debugging
+    "sourceMap": true,
+
+    // Enable strict type-checking options
+    "strict": true,
+
+    // Emit decorator metadata (useful for frameworks like NestJS)
+    "emitDecoratorMetadata": true,
+
+    // Support for experimental decorators (used in many frameworks)
+    "experimentalDecorators": true,
+
+    // Resolve module paths relative to baseUrl
+    "baseUrl": ".",
+
+    // Custom paths for module resolution (useful for aliases)
+    "paths": {
+      "@components/*": ["src/components/*"]
+    },
+
+    // Exclude default library definitions not relevant to your environment
+    "lib": ["ES6", "DOM"],
+
+    // Suppresses errors that have no significant impact
+    "skipLibCheck": true,
+
+    // Allows importing JavaScript files alongside TypeScript
+    "allowJs": true,
+
+    // Prevents emitting output files
+    "noEmit": false
+  },
+  "include": [
+    "src/**/*.ts",  // Include all TypeScript files in the src directory
+    "src/**/*.tsx"  // Include all TSX files (if using React)
+  ],
+  "exclude": [
+    "node_modules", // Exclude third-party libraries
+    "dist",         // Exclude the output directory
+    "test/**/*.spec.ts" // Exclude test files (if necessary)
+  ]
 }
