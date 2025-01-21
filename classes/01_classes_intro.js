@@ -46,3 +46,41 @@ var Course3 = /** @class */ (function () {
 }());
 var course3 = new Course2("TS", "Bootcamp", new Date(2001, 1, 22));
 console.log(course3.age);
+//setter
+var Course4 = /** @class */ (function () {
+    function Course4(_title, subtitle, creationDate) {
+        this._title = _title;
+        this.subtitle = subtitle;
+        this.creationDate = creationDate;
+    }
+    Object.defineProperty(Course4.prototype, "title", {
+        // Setter for the title
+        set: function (newTitle) {
+            if (!newTitle) {
+                throw new Error("Title is required");
+            }
+            else {
+                this._title = newTitle;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Course4.prototype, "age", {
+        // Getter for the age of the course
+        get: function () {
+            var ageInMS = new Date().getTime() - this.creationDate.getTime();
+            return ageInMS / 1000 / 60 / 60 / 24; // Convert ms to days
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Course4;
+}());
+// Usage example
+var course4 = new Course4("TS", "Bootcamp", new Date(2001, 1, 22));
+// Setting a new title
+course4.title = "New value";
+// Logging the course details and age
+console.log(course4);
+console.log("Course age in days: ".concat(course4.age));
