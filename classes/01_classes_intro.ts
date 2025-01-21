@@ -25,7 +25,7 @@ console.log(course.age());
 class Course2 {
   constructor(
     public title: string,
-    private subtitle: string,
+    public subtitle: string,
     private creationDate: Date
   ) {}
   age() {
@@ -38,3 +38,22 @@ class Course2 {
 const course2 = new Course2("TS", "Bootcamp", new Date(2001, 1, 22));
 
 console.log(course2.age());
+
+//getter
+class Course3 {
+  constructor(
+    private title: string,
+    private subtitle: string,
+    private creationDate: Date
+  ) {}
+
+  get age() {
+    const ageInMS = new Date().getTime() - this.creationDate.getTime();
+
+    return ageInMS / 1000 / 60 / 24;
+  }
+}
+
+const course3 = new Course2("TS", "Bootcamp", new Date(2001, 1, 22));
+
+console.log(course3.age);
