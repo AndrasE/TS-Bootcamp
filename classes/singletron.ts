@@ -1,4 +1,4 @@
-export class CourseService {
+class CourseService {
   private static INSTANCE: CourseService;
 
   private constructor() {
