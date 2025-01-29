@@ -9,7 +9,7 @@ interface Lesson {
     seqNum: number;
 }
 
-function freeze<T>(input: T): Readonly<T>{
+function freeze<T extends object>(input: T): Readonly<T>{
 return Object.freeze(input)
 }
 
@@ -23,3 +23,6 @@ const frozenLesson = freeze<Lesson> ({
     title: "new title",
     seqNum: 43
 })
+
+freeze(true)
+
