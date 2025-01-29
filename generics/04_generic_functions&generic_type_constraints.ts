@@ -24,5 +24,5 @@ const frozenLesson = freeze<Lesson> ({
     seqNum: 43
 })
 
-freeze(true)
+// freeze(true)
 
