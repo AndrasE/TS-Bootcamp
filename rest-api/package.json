@@ -1,7 +1,7 @@
 {
   "name": "rest-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "REST API project with Express and TypeORM",
   "scripts": {
     "build": "tsc",
     "start-server": "node dist/server.js"
@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.21.2",
     "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
   }
 }
