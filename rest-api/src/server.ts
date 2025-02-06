@@ -1,20 +1,31 @@
 import express from "express";
-import {root} from "./routes/root";
+import { root } from "./routes/root";
+import { isInteger } from "./utils";
 
-const app  = express();
+const app = express();
 
 function setupExpress() {
-    // http://localhost:3000/
-    app.route("/").get(root);
+  app.route("/").get(root);
 }
 
 function startServer() {
-    app.listen(3000, ()=> {
-        console.log("Server started on port 3000");
-    });
+  let port: number;
+
+  const portArg = process.argv[2];
+
+  if (isInteger(portArg)) {
+    port = parseInt(portArg);
+  }
+
+  if (!port) {
+    port = 3000;
+  }
+
+  app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
+  });
 }
 
 setupExpress();
 
 startServer();
-
