@@ -32,41 +32,26 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const dotenv = __importStar(require("dotenv"));
-const results = dotenv.config();
-if (results.error) {
-    console.log("Error loading .env file");
-    process.exit(1);
-    ``;
+exports.logger = void 0;
+const winston = __importStar(require("winston"));
+exports.logger = winston.createLogger({
+    level: process.env.LOGGER_LEVEL,
+    format: winston.format.json({
+        space: 4,
+    }),
+    transports: [
+        new winston.transports.File({
+            filename: "logs/all.log",
+        }),
+        new winston.transports.File({
+            filename: "logs/error.log",
+            level: "error",
+        }),
+    ],
+});
+if (process.env.NODE_ENV !== "production") {
+    exports.logger.add(new winston.transports.Console({
+        format: winston.format.simple(),
+    }));
 }
-const express_1 = __importDefault(require("express"));
-const root_1 = require("./routes/root");
-const utils_1 = require("./utils");
-const logger_1 = require("./logger");
-const app = (0, express_1.default)();
-function setupExpress() {
-    app.route("/").get(root_1.root);
-}
-function startServer() {
-    let port;
-    const portEnv = process.env.PORT;
-    const portArg = process.argv[2];
-    if ((0, utils_1.isInteger)(portEnv)) {
-        port = parseInt(portEnv);
-    }
-    if (!port && (0, utils_1.isInteger)(portArg)) {
-        port = parseInt(portArg);
-    }
-    if (!port) {
-        port = 3000;
-    }
-    app.listen(port, () => {
-        logger_1.logger.info(`Server started on port ${port}`);
-    });
-}
-setupExpress();
-startServer();
