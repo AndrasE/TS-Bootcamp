@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 
-export const dataSource = new DataSource({
+export const AppDataSource = new DataSource({
   type: "postgres",
   host: process.env.DB_HOST,
   username: process.env.DB_USERNAME,

@@ -47,6 +47,7 @@ const express_1 = __importDefault(require("express"));
 const root_1 = require("./routes/root");
 const utils_1 = require("./utils");
 const logger_1 = require("./logger");
+const data_source_1 = require("./data-source");
 const app = (0, express_1.default)();
 function setupExpress() {
     app.route("/").get(root_1.root);
@@ -68,5 +69,13 @@ function startServer() {
         logger_1.logger.info(`Server started on port ${port}`);
     });
 }
-setupExpress();
-startServer();
+data_source_1.AppDataSource.initialize()
+    .then(() => {
+    logger_1.logger.info("Database connected");
+    setupExpress();
+    startServer();
+})
+    .catch((error) => {
+    logger_1.logger.error(`Error connecting to database: ${error.message}`);
+    process.exit(1);
+});
