@@ -4,6 +4,7 @@
     "outDir": "dist",
     "esModuleInterop": true,
     "moduleResolution": "nodenext",
-    "module": "NodeNext"
+    "module": "NodeNext",
+    "experimentalDecorators": true
   }
 }
