@@ -45,11 +45,11 @@ function startServer() {
 
 AppDataSource.initialize()
   .then(() => {
-    logger.info("Database connected");
+    logger.info("Data source initialized");
     setupExpress();
     startServer();
   })
   .catch((error) => {
-    logger.error(`Error connecting to database: ${error.message}`);
+    logger.error("Error initializing data source", error);
     process.exit(1);
   });

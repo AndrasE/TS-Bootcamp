@@ -2,6 +2,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  ManyToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from "typeorm";
@@ -21,6 +22,9 @@ export class Lesson {
 
   @Column()
   seqNo: number;
+
+  @ManyToOne(() => Course, (course) => course.lessons)
+  course: Course;
 
   @CreateDateColumn()
   createdDate: Date;
