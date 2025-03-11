@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "moduleResolution": "nodenext",
     "module": "NodeNext",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }

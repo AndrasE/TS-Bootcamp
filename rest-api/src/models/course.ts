@@ -7,7 +7,6 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 import { Lesson } from "./lesson";
-
 @Entity({
   name: "COURSES",
 })

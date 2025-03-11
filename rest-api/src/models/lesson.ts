@@ -2,10 +2,12 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from "typeorm";
+import { Course } from "./course";
 
 @Entity({
   name: "LESSONS",
@@ -24,6 +26,7 @@ export class Lesson {
   seqNo: number;
 
   @ManyToOne(() => Course, (course) => course.lessons)
+  @JoinColumn({ name: "courseId" })
   course: Course;
 
   @CreateDateColumn()

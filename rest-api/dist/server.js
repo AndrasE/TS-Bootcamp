@@ -43,6 +43,7 @@ if (results.error) {
     process.exit(1);
     ``;
 }
+require("reflect-metadata");
 const express_1 = __importDefault(require("express"));
 const root_1 = require("./routes/root");
 const utils_1 = require("./utils");
@@ -71,11 +72,11 @@ function startServer() {
 }
 data_source_1.AppDataSource.initialize()
     .then(() => {
-    logger_1.logger.info("Database connected");
+    logger_1.logger.info("Data source initialized");
     setupExpress();
     startServer();
 })
     .catch((error) => {
-    logger_1.logger.error(`Error connecting to database: ${error.message}`);
+    logger_1.logger.error("Error initializing data source", error);
     process.exit(1);
 });

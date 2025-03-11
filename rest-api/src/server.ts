@@ -8,6 +8,7 @@ if (results.error) {
   ``;
 }
 
+import "reflect-metadata";
 import express from "express";
 import { root } from "./routes/root";
 import { isInteger } from "./utils";
