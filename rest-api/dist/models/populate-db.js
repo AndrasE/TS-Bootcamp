@@ -36,10 +36,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
 const results = dotenv.config();
 require("reflect-metadata");
+const db_data_1 = require("./db-data");
 const data_source_1 = require("../data-source");
+const course_1 = require("./course");
+const lesson_1 = require("./lesson");
 async function populateDb() {
     await data_source_1.AppDataSource.initialize();
     console.log("Data connection initialized");
+    const courses = Object.values(db_data_1.COURSES);
+    const courseRepository = data_source_1.AppDataSource.getRepository(course_1.Course);
+    const lessonRepository = data_source_1.AppDataSource.getRepository(lesson_1.Lesson);
+    for (let courseData of courses) {
+        console.log(`Inserting course ${courseData.title}`);
+        const course = courseRepository.create(courseData);
+        await courseRepository.save(course);
+        for (let lessonData of courseData.lessons) {
+            console.log(`Inserting lesson ${lessonData.title}`);
+            const lesson = lessonRepository.create({
+                ...lessonData,
+                course: course, // Associate the lesson with the course
+            });
+            await lessonRepository.save(lesson);
+        }
+    }
+    const totalCourses = await courseRepository.createQueryBuilder().getCount();
+    const totalLessons = await lessonRepository.createQueryBuilder().getCount();
+    console.log(`Database populated with ${totalCourses} courses and ${totalLessons} lessons`);
 }
 populateDb()
     .then(() => {
