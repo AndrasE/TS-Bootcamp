@@ -49,9 +49,11 @@ const root_1 = require("./routes/root");
 const utils_1 = require("./utils");
 const logger_1 = require("./logger");
 const data_source_1 = require("./data-source");
+const get_all_courses_1 = require("./routes/get-all-courses");
 const app = (0, express_1.default)();
 function setupExpress() {
     app.route("/").get(root_1.root);
+    app.route("/api/courses").get(get_all_courses_1.gettAllCourses);
 }
 function startServer() {
     let port;
