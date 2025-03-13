@@ -29,10 +29,9 @@ async function populateDb() {
     for (let lessonData of courseData.lessons) {
       console.log(`Inserting lesson ${lessonData.title}`);
 
-      const lesson = lessonRepository.create({
-        ...lessonData,
-        course: course, // Associate the lesson with the course
-      });
+      const lesson = lessonRepository.create(lessonData);
+
+      lesson.course = course;
 
       await lessonRepository.save(lesson);
     }

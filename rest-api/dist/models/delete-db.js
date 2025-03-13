@@ -36,37 +36,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
 const results = dotenv.config();
 require("reflect-metadata");
-const db_data_1 = require("./db-data");
 const data_source_1 = require("../data-source");
-const course_1 = require("./course");
 const lesson_1 = require("./lesson");
-async function populateDb() {
+const course_1 = require("./course");
+async function deleteDb() {
     await data_source_1.AppDataSource.initialize();
     console.log("Data connection initialized");
-    const courses = Object.values(db_data_1.COURSES);
-    const courseRepository = data_source_1.AppDataSource.getRepository(course_1.Course);
-    const lessonRepository = data_source_1.AppDataSource.getRepository(lesson_1.Lesson);
-    for (let courseData of courses) {
-        console.log(`Inserting course ${courseData.title}`);
-        const course = courseRepository.create(courseData);
-        await courseRepository.save(course);
-        for (let lessonData of courseData.lessons) {
-            console.log(`Inserting lesson ${lessonData.title}`);
-            const lesson = lessonRepository.create(lessonData);
-            lesson.course = course;
-            await lessonRepository.save(lesson);
-        }
-    }
-    const totalCourses = await courseRepository.createQueryBuilder().getCount();
-    const totalLessons = await lessonRepository.createQueryBuilder().getCount();
-    console.log(`Database populated with ${totalCourses} courses and ${totalLessons} lessons`);
+    console.log("Deleting lessons table");
+    await data_source_1.AppDataSource.getRepository(lesson_1.Lesson).delete({});
+    console.log("Deleting courses table");
+    await data_source_1.AppDataSource.getRepository(course_1.Course).delete({});
+    console.log("Database tables deleted, closing connection");
 }
-populateDb()
+deleteDb()
     .then(() => {
-    console.log("Populating database with seed data");
+    console.log("Database deleted");
     process.exit(0);
 })
     .catch((error) => {
-    console.log("Error populating database with seed data", error);
+    console.log("Error deleting database", error);
     process.exit(1);
 });
