@@ -7,6 +7,7 @@ export async function gettAllCourses(request: Request, response: Response) {
 
   const courses = await AppDataSource.getRepository("Course")
     .createQueryBuilder("courses")
+    .leftJoinAndSelect("courses.lessons", "LESSONS")
     .orderBy("courses.seqNo")
     .getMany();
 

@@ -7,6 +7,7 @@ async function gettAllCourses(request, response) {
     logger_1.logger.info("Getting all courses");
     const courses = await data_source_1.AppDataSource.getRepository("Course")
         .createQueryBuilder("courses")
+        .leftJoinAndSelect("courses.lessons", "LESSONS")
         .orderBy("courses.seqNo")
         .getMany();
     response.status(200).json({ courses });
