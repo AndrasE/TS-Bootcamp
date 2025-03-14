@@ -15,6 +15,7 @@ import { isInteger } from "./utils";
 import { logger } from "./logger";
 import { AppDataSource } from "./data-source";
 import { gettAllCourses } from "./routes/get-all-courses";
+import { defaultErrorHandler } from "./middlewares/default-error-handling";
 
 const app = express();
 
@@ -22,6 +23,8 @@ function setupExpress() {
   app.route("/").get(root);
 
   app.route("/api/courses").get(gettAllCourses);
+
+  app.use(defaultErrorHandler);
 }
 
 function startServer() {
