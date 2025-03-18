@@ -17,9 +17,13 @@ import { AppDataSource } from "./data-source";
 import { gettAllCourses } from "./routes/get-all-courses";
 import { defaultErrorHandler } from "./middlewares/default-error-handling";
 
+const cors = require("cors");
+
 const app = express();
 
 function setupExpress() {
+  app.use(cors("*"));
+
   app.route("/").get(root);
 
   app.route("/api/courses").get(gettAllCourses);

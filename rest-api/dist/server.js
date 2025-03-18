@@ -51,8 +51,10 @@ const logger_1 = require("./logger");
 const data_source_1 = require("./data-source");
 const get_all_courses_1 = require("./routes/get-all-courses");
 const default_error_handling_1 = require("./middlewares/default-error-handling");
+const cors = require("cors");
 const app = (0, express_1.default)();
 function setupExpress() {
+    app.use(cors("*"));
     app.route("/").get(root_1.root);
     app.route("/api/courses").get(get_all_courses_1.gettAllCourses);
     app.use(default_error_handling_1.defaultErrorHandler);
