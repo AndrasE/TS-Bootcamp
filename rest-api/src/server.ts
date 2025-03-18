@@ -16,6 +16,7 @@ import { logger } from "./logger";
 import { AppDataSource } from "./data-source";
 import { gettAllCourses } from "./routes/get-all-courses";
 import { defaultErrorHandler } from "./middlewares/default-error-handling";
+import { findCourseByUrl } from "./routes/find-course-by-url";
 
 const cors = require("cors");
 
@@ -27,6 +28,8 @@ function setupExpress() {
   app.route("/").get(root);
 
   app.route("/api/courses").get(gettAllCourses);
+
+  app.route("/api/courses/:courseUrl").get(findCourseByUrl);
 
   app.use(defaultErrorHandler);
 }

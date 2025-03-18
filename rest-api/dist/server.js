@@ -51,12 +51,14 @@ const logger_1 = require("./logger");
 const data_source_1 = require("./data-source");
 const get_all_courses_1 = require("./routes/get-all-courses");
 const default_error_handling_1 = require("./middlewares/default-error-handling");
+const find_course_by_url_1 = require("./routes/find-course-by-url");
 const cors = require("cors");
 const app = (0, express_1.default)();
 function setupExpress() {
     app.use(cors("*"));
     app.route("/").get(root_1.root);
     app.route("/api/courses").get(get_all_courses_1.gettAllCourses);
+    app.route("/api/courses/:courseUrl").get(find_course_by_url_1.findCourseByUrl);
     app.use(default_error_handling_1.defaultErrorHandler);
 }
 function startServer() {

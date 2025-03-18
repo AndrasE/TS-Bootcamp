@@ -15,6 +15,7 @@ const lesson_1 = require("./lesson");
 let Course = class Course {
     id;
     seqNo;
+    url;
     title;
     longDescription;
     category;
@@ -31,6 +32,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], Course.prototype, "seqNo", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Course.prototype, "url", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
