@@ -32,7 +32,7 @@ function setupExpress() {
 
   app.route("/api/courses/:courseUrl").get(findCourseByUrl);
 
-  app.route("/api/courses/:courseUrl/lessons").get(findLessonForCourse);
+  app.route("/api/courses/:courseId/lessons").get(findLessonForCourse);
 
   app.use(defaultErrorHandler);
 }

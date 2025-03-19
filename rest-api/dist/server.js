@@ -60,7 +60,7 @@ function setupExpress() {
     app.route("/").get(root_1.root);
     app.route("/api/courses").get(get_all_courses_1.gettAllCourses);
     app.route("/api/courses/:courseUrl").get(find_course_by_url_1.findCourseByUrl);
-    app.route("/api/courses/:courseUrl/lessons").get(find_lesson_for_course_1.findLessonForCourse);
+    app.route("/api/courses/:courseId/lessons").get(find_lesson_for_course_1.findLessonForCourse);
     app.use(default_error_handling_1.defaultErrorHandler);
 }
 function startServer() {
