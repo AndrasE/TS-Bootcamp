@@ -18,13 +18,18 @@ import { gettAllCourses } from "./routes/get-all-courses";
 import { defaultErrorHandler } from "./middlewares/default-error-handling";
 import { findCourseByUrl } from "./routes/find-course-by-url";
 import { findLessonForCourse } from "./routes/find-lesson-for-course";
+import { updateCourse } from "./routes/update-course";
 
 const cors = require("cors");
+
+const bodyParser = require("body-parser");
 
 const app = express();
 
 function setupExpress() {
   app.use(cors("*"));
+
+  app.use(bodyParser.json()); // for parsing application/json
 
   app.route("/").get(root);
 
@@ -33,6 +38,8 @@ function setupExpress() {
   app.route("/api/courses/:courseUrl").get(findCourseByUrl);
 
   app.route("/api/courses/:courseId/lessons").get(findLessonForCourse);
+
+  app.route("api/courses/:courseId").patch(updateCourse);
 
   app.use(defaultErrorHandler);
 }
