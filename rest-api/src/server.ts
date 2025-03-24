@@ -39,7 +39,7 @@ function setupExpress() {
 
   app.route("/api/courses/:courseId/lessons").get(findLessonForCourse);
 
-  app.route("api/courses/:courseId").patch(updateCourse);
+  app.route("/api/courses/:courseId").patch(updateCourse);
 
   app.use(defaultErrorHandler);
 }
