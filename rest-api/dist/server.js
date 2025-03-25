@@ -55,6 +55,7 @@ const find_course_by_url_1 = require("./routes/find-course-by-url");
 const find_lesson_for_course_1 = require("./routes/find-lesson-for-course");
 const update_course_1 = require("./routes/update-course");
 const create_course_1 = require("./routes/create-course");
+const delete_course_1 = require("./routes/delete-course");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = (0, express_1.default)();
@@ -67,6 +68,7 @@ function setupExpress() {
     app.route("/api/courses/:courseId/lessons").get(find_lesson_for_course_1.findLessonForCourse);
     app.route("/api/courses/:courseId").patch(update_course_1.updateCourse);
     app.route("/api/courses").post(create_course_1.createCourse);
+    app.route("/api/courses/:courseId").delete(delete_course_1.deleteCourseAndLessons);
     app.use(default_error_handling_1.defaultErrorHandler);
 }
 function startServer() {
