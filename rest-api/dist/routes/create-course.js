@@ -11,8 +11,8 @@ async function createCourse(request, response, next) {
         if (!data) {
             throw "Missing course data";
         }
-        await data_source_1.AppDataSource.manager.transaction("REPEATABLE READ", async (transactionalEntityManager) => {
-            //just to make the code more readable
+        const course = await data_source_1.AppDataSource.manager.transaction("REPEATABLE READ", async (transactionalEntityManager) => {
+            //just to make the code more readable below
             const repository = transactionalEntityManager.getRepository(course_1.Course);
             const result = await repository
                 .createQueryBuilder("courses")
@@ -23,7 +23,9 @@ async function createCourse(request, response, next) {
                 seqNo: (result?.max ?? 0) + 1,
             });
             await repository.save(course);
+            return course;
         });
+        response.status(200).json({ course });
     }
     catch (error) {
         logger_1.logger.error(`Error calling createCourse(), ${error}`);
