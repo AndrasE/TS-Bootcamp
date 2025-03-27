@@ -40,6 +40,7 @@ const db_data_1 = require("./db-data");
 const data_source_1 = require("../data-source");
 const course_1 = require("./course");
 const lesson_1 = require("./lesson");
+const user_1 = require("./user");
 async function populateDb() {
     await data_source_1.AppDataSource.initialize();
     console.log("Data connection initialized");
@@ -56,6 +57,17 @@ async function populateDb() {
             lesson.course = course;
             await lessonRepository.save(lesson);
         }
+    }
+    const users = Object.values(db_data_1.USERS);
+    for (let userData of users) {
+        console.log(`Inserting user ${userData.email}`);
+        const { email, pictureUrl, isAdmin, passwordSalt, plainTextPassword } = userData;
+        data_source_1.AppDataSource.getRepository(user_1.User).create({
+            email,
+            pictureUrl,
+            isAdmin,
+            passwordSalt,
+        });
     }
     const totalCourses = await courseRepository.createQueryBuilder().getCount();
     const totalLessons = await lessonRepository.createQueryBuilder().getCount();

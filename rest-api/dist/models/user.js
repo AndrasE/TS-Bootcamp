@@ -15,6 +15,7 @@ let User = class User {
     id;
     email;
     passwordHash;
+    passwordSalt;
     pictureUrl;
     isAdmin;
     createdDate;
@@ -33,6 +34,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], User.prototype, "passwordHash", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], User.prototype, "passwordSalt", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
