@@ -39,13 +39,16 @@ require("reflect-metadata");
 const data_source_1 = require("../data-source");
 const lesson_1 = require("./lesson");
 const course_1 = require("./course");
+const user_1 = require("./user");
 async function deleteDb() {
     await data_source_1.AppDataSource.initialize();
     console.log("Data connection initialized");
-    console.log("Deleting lessons table");
+    console.log("Deleting LESSONS table");
     await data_source_1.AppDataSource.getRepository(lesson_1.Lesson).delete({});
-    console.log("Deleting courses table");
+    console.log("Deleting COURSES table");
     await data_source_1.AppDataSource.getRepository(course_1.Course).delete({});
+    console.log("Deleting USERS table");
+    await data_source_1.AppDataSource.getRepository(user_1.User).delete({});
     console.log("Database tables deleted, closing connection");
 }
 deleteDb()
