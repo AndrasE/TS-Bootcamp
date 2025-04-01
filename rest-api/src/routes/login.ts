@@ -3,6 +3,9 @@ import { logger } from "../logger";
 import { AppDataSource } from "../data-source";
 import { calculatePasswordHash } from "../utils";
 
+const JWT_SECRET = process.env.JWT_SECRET;
+const jwt = require("jsonwebtoken");
+
 export async function login(
   request: Request,
   response: Response,
@@ -49,7 +52,17 @@ export async function login(
 
     const { pictureUrl, isAdmin } = user;
 
-    response.status(200).json({ user: { email, pictureUrl, isAdmin } });
+    const authJwt = {
+      userId: user.id,
+      email,
+      isAdmin,
+    };
+
+    const authJwtToken = await jwt.sign(authJwt, JWT_SECRET);
+
+    response
+      .status(200)
+      .json({ user: { email, pictureUrl, isAdmin }, authJwtToken });
   } catch (error) {
     logger.error("Error in login", error);
     return next(error);
