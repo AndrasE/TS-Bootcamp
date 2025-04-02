@@ -1,6 +1,6 @@
 <h3 align="center">
   <a href="https://andrase.github.io/firsty/" target="_blank" rel="noopener noreferrer">
-  <img src="https://github.com/AndrasE/raw-readme/blob/36809e099018f4297ae710817bab6e90dc8c9737/logo/ts-bootcamp-readme.png" width="230px">
+  <img src="https://github.com/AndrasE/raw-readme/blob/36809e099018f4297ae710817bab6e90dc8c9737/logo/ts-bootcamp-readme.png" width="190px">
   </a>
 <br/>
   
