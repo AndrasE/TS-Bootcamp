@@ -58,6 +58,7 @@ const create_course_1 = require("./routes/create-course");
 const delete_course_1 = require("./routes/delete-course");
 const create_user_1 = require("./routes/create-user");
 const login_1 = require("./routes/login");
+const authentication_middleware_1 = require("./middlewares/authentication_middleware");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = (0, express_1.default)();
@@ -65,13 +66,19 @@ function setupExpress() {
     app.use(cors("*"));
     app.use(bodyParser.json()); // for parsing application/json
     app.route("/").get(root_1.root);
-    app.route("/api/courses").get(get_all_courses_1.gettAllCourses);
-    app.route("/api/courses/:courseUrl").get(find_course_by_url_1.findCourseByUrl);
-    app.route("/api/courses/:courseId/lessons").get(find_lesson_for_course_1.findLessonForCourse);
-    app.route("/api/courses/:courseId").patch(update_course_1.updateCourse);
-    app.route("/api/courses").post(create_course_1.createCourse);
-    app.route("/api/courses/:courseId").delete(delete_course_1.deleteCourseAndLessons);
-    app.route("/api/users").post(create_user_1.createUser);
+    app.route("/api/courses").get(authentication_middleware_1.checkIfAuthenticated, get_all_courses_1.gettAllCourses);
+    app
+        .route("/api/courses/:courseUrl")
+        .get(authentication_middleware_1.checkIfAuthenticated, find_course_by_url_1.findCourseByUrl);
+    app
+        .route("/api/courses/:courseId/lessons")
+        .get(authentication_middleware_1.checkIfAuthenticated, find_lesson_for_course_1.findLessonForCourse);
+    app.route("/api/courses/:courseId").patch(authentication_middleware_1.checkIfAuthenticated, update_course_1.updateCourse);
+    app.route("/api/courses").post(authentication_middleware_1.checkIfAuthenticated, create_course_1.createCourse);
+    app
+        .route("/api/courses/:courseId")
+        .delete(authentication_middleware_1.checkIfAuthenticated, delete_course_1.deleteCourseAndLessons);
+    app.route("/api/users").post(authentication_middleware_1.checkIfAuthenticated, create_user_1.createUser);
     app.route("/api/login").post(login_1.login);
     app.use(default_error_handling_1.defaultErrorHandler);
 }
