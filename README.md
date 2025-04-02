@@ -45,7 +45,7 @@ Environment Configuration: Create a .env file in the project root and add your c
 
 ```env
 NODE_ENV=development // Keep it as it is
-#PORT = 3000#PORT = 3000 // Keep it as it is
+#PORT = 3000 // Keep it as it is
 LOGGER_LEVEL=debug // Keep it as it is
 DB_HOST=Render
 DB_PORT= Render
