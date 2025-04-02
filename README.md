@@ -18,7 +18,7 @@ It was a cource on **[Udemy](https://www.udemy.com/course/complete-typescript-2-
 - Comprehensive coverage of Object-Oriented Programming, Generics, and Decorators
 - Building a REST API using Express and TypeORM
 
-👉 For more in-depth notes, check out **[my TypeScript notes](https://github.com/AndrasE/TS-Bootcamp/blob/main/justsomeTypeScript.pdf)**.
+👉 For more in-depth notes, check out **[my TypeScript notes](https://github.com/AndrasE/TS-Bootcamp/blob/main/justsomeTS.pdf)**.
 
 
 ## Run the REST API Project 🚀
